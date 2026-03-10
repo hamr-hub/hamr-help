@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import GettingStarted from './pages/GettingStarted';
 import FAQ from './pages/FAQ';
+import Troubleshooting from './pages/Troubleshooting';
 import Contact from './pages/Contact';
 
 export default function App() {
@@ -15,8 +16,13 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/getting-started" element={<GettingStarted />} />
+            <Route path="/getting-started/*" element={<GettingStarted />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/faq/*" element={<FAQ />} />
+            <Route path="/troubleshooting" element={<Troubleshooting />} />
+            <Route path="/troubleshooting/*" element={<Troubleshooting />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/guides/*" element={<GettingStarted />} />
           </Routes>
         </main>
         <Footer />
